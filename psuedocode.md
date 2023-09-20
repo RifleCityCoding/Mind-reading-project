@@ -2,7 +2,7 @@
 ```
   Setup basic bootstrap snippet
   Lets try completing using carousel
-  Create each slide --- 6 slides total
+  Create each page --- 6 slides total
   Slide 1:
       Text: "I can read your mind"
       CTA: "Go" button
@@ -31,32 +31,32 @@
 
 ```
 BODY
-    DIV: Carousel slide
-        DIV: Carousel inner
-            DIV: Slide 1
+    DIV: Container
+        DIV: Column
+            DIV: Page 1
                 PARA: "I can read your mind"
                 BTN: GO
-            DIV: Slide 2
+            DIV: page 2
                 PARA: "Pick a number from 1-99"
                 BTN: Next
-                secondaryText: "when you have your number click next
+                secondaryText: "when you have your number click next"
                 BTN: Go back (Refresh symbol)
-            DIV: Slide 3
+            DIV: Page 3
                 PARA: Add both digits together to get a new number
                 BTN: Next
                 secondaryText: "Ex: 14 is 1 + 4 = 5" "click next to proceed"
                 BTN: Go back (Refresh symbol)
-            DIV: Slide 4
+            DIV: Page 4
                 PARA: "Subtract your new number from the original number"
                 BTN: NEXT
                 secondaryText: "Ex: 14 - 5 = 9" "click next to proceed"
                 BTN: Go back (Refresh symbol)
-            DIV: Slide 5
+            DIV: Page 5
                 PARA: "(Number = Symbol) * 100
                 BTN: Reveal
                 secondaryText: "Find your new number." "Note the symbol beside the number"
                 BTN: Go back (refresh symbol)
-            DIV: Slide 6
+            DIV: Page 6
                 PARA: "(Randomly generated symbol)"
                 secondaryText: "Your symbol is: (generated symbol)"
                 BTN: Go back (refresh symbol)
@@ -68,16 +68,14 @@ BODY
 Add JSON objects for each symbol
 Need variables:
     Buttons:
-        Next
+        Next/Reveal
         Go back
-        Reveal
-        Text changes from Next to Reveal in slides 4 --> 6
+        Text changes from Next to Reveal in slides 4 --> 5
 Functions:
-    Buttons:
-        Next: pushes to next slide
-        Reveal: Same as next but need a text change to reveal
-        Reveal: Pressing reveal moves to next slide but also generates text string pulled from JSON objects
-        Go back: Sends you to slide 1
+    Switch state
+        Case 0:
+            grab button
+            grab text 
 
 
 ```

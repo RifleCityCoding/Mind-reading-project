@@ -1,8 +1,8 @@
 <!--
 
   Setup basic bootstrap snippet
-  Lets try completing using carousel
-  Create each slide --- 6 slides total
+  Lets try completing using a div container
+  Create each new "page" --- 6 "pages" total
   Slide 1:
       Text: "I can read your mind"
       CTA: "Go" button
@@ -43,21 +43,20 @@
     <link href="styles.css" rel="stylesheet">
 </head>
   <body>
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-              Test stuff here
-              button inside
-              <button type="button" class="btn">Go</button>
-        </div>
-        <div class="carousel-item">
-          Text sample
-        </div>
-        <div class="carousel-item">
-          Text sample
-        </div>
+    <div class="container position relative">
+      <div class="col-4 position-absolute top-50 start-50 translate-middle">
+        <div id="divText">I can read your mind</div>
+          <div id="Next button">
+
+          <button class="btn">Go</button>
+          </div>
+
       </div>
+
+  
     </div>
+
+    </body>
     <script src="reader.js"></script>
   </body>
 </html>
