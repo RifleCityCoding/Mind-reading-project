@@ -1,7 +1,5 @@
 # HTML PSUED
 ```
-<!--
-
   Setup basic bootstrap snippet
   Lets try completing using carousel
   Create each slide --- 6 slides total
@@ -29,13 +27,9 @@
       CTA: refresh button
       subText: "Your symbol is:" "(symbol)"
 
-
--->
 ```
 
 ```
-<!--
-
 BODY
     DIV: Carousel slide
         DIV: Carousel inner
@@ -66,13 +60,5 @@ BODY
                 PARA: "(Randomly generated symbol)"
                 secondaryText: "Your symbol is: (generated symbol)"
                 BTN: Go back (refresh symbol)
-                
-                
-                
-                
-                
-                
-
- -->
 
 ```
