@@ -1,3 +1,5 @@
+# HTML PSUEDO
+
 <!--
 
   Setup basic bootstrap snippet
@@ -27,6 +29,48 @@
       CTA: refresh button
       subText: "Your symbol is:" "(symbol)"
 
+
 -->
+
+<!--
+
+BODY
+    DIV: Carousel slide
+        DIV: Carousel inner
+            DIV: Slide 1
+                PARA: "I can read your mind"
+                BTN: GO
+            DIV: Slide 2
+                PARA: "Pick a number from 1-99"
+                BTN: Next
+                secondaryText: "when you have your number click next
+                BTN: Go back (Refresh symbol)
+            DIV: Slide 3
+                PARA: Add both digits together to get a new number
+                BTN: Next
+                secondaryText: "Ex: 14 is 1 + 4 = 5" "click next to proceed"
+                BTN: Go back (Refresh symbol)
+            DIV: Slide 4
+                PARA: "Subtract your new number from the original number"
+                BTN: NEXT
+                secondaryText: "Ex: 14 - 5 = 9" "click next to proceed"
+                BTN: Go back (Refresh symbol)
+            DIV: Slide 5
+                PARA: "(Number = Symbol) * 100
+                BTN: Reveal
+                secondaryText: "Find your new number." "Note the symbol beside the number"
+                BTN: Go back (refresh symbol)
+            DIV: Slide 6
+                PARA: "(Randomly generated symbol)"
+                secondaryText: "Your symbol is: (generated symbol)"
+                BTN: Go back (refresh symbol)
+                
+                
+                
+                
+                
+                
+
+ -->
 
 
