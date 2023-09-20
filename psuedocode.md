@@ -1,5 +1,5 @@
-# HTML PSUEDO
-
+# HTML PSUED
+<div>
 <!--
 
   Setup basic bootstrap snippet
@@ -31,7 +31,9 @@
 
 
 -->
+</div>
 
+<div>
 <!--
 
 BODY
@@ -72,5 +74,6 @@ BODY
                 
 
  -->
+</div>
 
 
