@@ -62,3 +62,22 @@ BODY
                 BTN: Go back (refresh symbol)
 
 ```
+
+# JAVASCRIPT Psuedo
+```
+Add JSON objects for each symbol
+Need variables:
+    Buttons:
+        Next
+        Go back
+        Reveal
+        Text changes from Next to Reveal in slides 4 --> 6
+Functions:
+    Buttons:
+        Next: pushes to next slide
+        Reveal: Same as next but need a text change to reveal
+        Reveal: Pressing reveal moves to next slide but also generates text string pulled from JSON objects
+        Go back: Sends you to slide 1
+
+
+```
