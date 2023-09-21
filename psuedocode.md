@@ -76,6 +76,23 @@ Functions:
         Case 0:
             grab button
             grab text
+        Case 1:
+            btn changes to next
+            divText new
+            subText new
+        Case 2:
+            divText new
+            subText new
+        Case 3:
+            divText new
+            divText assign number to random symbol from array and print
+            subText new
+            Next button changes to reveal
+        Case 4:
+            divText new
+            divText Take symbol from 9 to work
+            subText new
+            Next button dissapears
 
 
 ```
