@@ -121,112 +121,11 @@ const nextBtn = document.getElementById("next-button");
 const resetBtn = document.getElementById("reset-button");
 
 // Creating a char code string to pull random symbols from.
-const yourSymbol = String.fromCharCode(Math.floor(Math.random() * 10) + 36);
-//Our JSON variable containing 1-99
-const randomSym = {
-        "1": "!",
-        "2": "@",
-        "3": "#",
-        "4": "$",
-        "5": "%",
-        "6": "★",
-        "7": "☆",
-        "8": "✡",
-        "9": "✦",
-        "10": "✪",
-        "11": "⁂",
-        "12": "⁑",
-        "13": "✿",
-        "14": "♔",
-        "15": "♕",
-        "16": "♖",
-        "17": "♗",
-        "18": "♘",
-        "19": "♙",
-        "20": "♚",
-        "21": "♛",
-        "22": "♜",
-        "23": "♝",
-        "24": "♞",
-        "25": "♟",
-        "26": "♤",
-        "27": "♠",
-        "28": "♧",
-        "29": "♣",
-        "30": "♡",
-        "31": "♥",
-        "32": "♢",
-        "33": "♦",
-        "34": "♩",
-        "35": "☧",
-        "36": "☨",
-        "37": "☩",
-        "38": "☫",
-        "39": "☬",
-        "40": "☭",
-        "41": "☯",
-        "42": "☽",
-        "43": "☾",
-        "44": "✙",
-        "45": "✛",
-        "46": "✜",
-        "47": "✝",
-        "48": "♁",
-        "49": "♆",
-        "50": "❖",
-        "51": "♅",
-        "52": "☢",
-        "53": "☣",
-        "54": "☦",
-        "55": "㋛",
-        "56": "ꑇ",
-        "57": "ꐦ",
-        "58": "ꐠ",
-        "59": "ꐡ",
-        "60": "ꐕ",
-        "61": "ꌇ",
-        "62": "ꌈ",
-        "63": "ꉕ",
-        "64": "ꆛ",
-        "65": "ꆜ",
-        "66": "ﭢ",
-        "67": "⍢",
-        "68": "⍣",
-        "69": "⍤",
-        "70": "≄",
-        "71": "≅",
-        "72": "≆",
-        "73": "≈",
-        "74": "≉",
-        "75": "〝",
-        "76": "⊺",
-        "77": "⊻",
-        "78": "⊼",
-        "79": "⊽",
-        "80": "⊾",
-        "81": "⊿",
-        "82": "⋀",
-        "83": "⋁",
-        "84": "⋂",
-        "85": "⋃",
-        "86": "⋄",
-        "87": "⋇",
-        "88": "⋈",
-        "89": "⋉",
-        "90": "☰",
-        "91": "☲",
-        "92": "☱",
-        "93": "☴",
-        "94": "☵",
-        "95": "☶",
-        "96": "☳",
-        "97": "☷",
-        "98": "〶",
-        "99": "⋪"
-}
 
+// Create our array of symbols
+const yourSym = ["!", "@","#","$","%","★","☆","✡","✦"]
 //Lets start creating a function to try and make things work. Lets change the text to pick number when button is pressed.
-
+let randomSym = Math.random() * yourSym.length;
   /*  nextBtn.addEventListener('click', () => {
         // Inside this callback function, you can change the text of the div
         console.log("Button pressed!");
@@ -251,17 +150,8 @@ switch (currentText) {
     case "Add both digits together to get a new number":
         divText.innerHTML = "Subtract the new number from your original number"
     case "Subtract the new number from your original number":
-        divText.innerHTML = 'Scroll down and find your number';
+        divText.innerHTML = 'Scroll down and find your number<br/>';
 
-            for (var i = 0; i < 100; i++) {
-                if (i % 9 == 0) {
-                    
-                    divText.innerHTML += i + ' = ' + yourSymbol + '<br />';
-                }
-                else  {
-                    var num = String.fromCharCode(Math.floor(Math.random() * 10) + 36);
-                    divText.innerHTML += i + ' = ' + num + '<br />';
-                }
-            }
+
 }   
     })
