@@ -245,6 +245,7 @@ switch (currentText) {
     case "Pick a number from 1-99":
         divText.innerHTML = "Add both digits together to get a new number"
         break;
-    case "Subtract the new number from your original number"
+    case "Add both digits together to get a new number":
+        divText.innerHTML = "Subtract the new number from your original number"
 }
     })
