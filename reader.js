@@ -222,12 +222,14 @@ const randomSym = {
         "99": "⋪"
 }
 
-//Lets start creating a function to try and make things work. Lets SWITCH text inside my container when Start is pressed.
+//Lets start creating a function to try and make things work. Lets change the text to pick number when button is pressed.
 function nextPage() {
-        if (nextBtn.addEventListener('click', )){
+   // const nextBtn = document.getElementById('next-button')
 
+    nextBtn.addEventListener('click', function() {
+        // Inside this callback function, you can change the text of the div
+        console.log("Button pressed!");
         divText.innerHTML = "Pick a number from 1-99";
+    });
 
-        }
-
-     } 
+    } 
