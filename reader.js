@@ -232,3 +232,19 @@ const randomSym = {
     
 */
     //Okay so now we comment out the above statement and try to make it a switch statement!
+
+    nextBtn.addEventListener('click', () => {
+        // Get the current text of the div
+        const currentText = divText.innerHTML;
+    
+// Call your current text to the page
+switch (currentText) {
+    case "I can read your mind!":
+        divText.innerHTML = "Pick a number from 1-99";
+        break;
+    case "Pick a number from 1-99":
+        divText.innerHTML = "Add both digits together to get a new number"
+        break;
+    case "Subtract the new number from your original number"
+}
+    })
