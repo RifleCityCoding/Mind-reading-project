@@ -72,10 +72,10 @@ Need variables:
         Go back
         Text changes from Next to Reveal in slides 4 --> 5
 Functions:
-    Switch state
+    Switch state (No idea how this works, trying to learn switch to get this to work)
         Case 0:
             grab button
-            grab text 
+            grab text
 
 
 ```
