@@ -115,10 +115,10 @@ Functions
             switch : Case 0-5 
 */
 // Name our variables
-const divText = document.getElementById("div-text")
-const subText = document.getElementById("sub-text")
-const nextBtn = document.getElementById("next-button")
-const resetBtn = document.getElementById("reset-button")
+const divText = document.getElementById("div-text");
+const subText = document.getElementById("sub-text");
+const nextBtn = document.getElementById("next-button");
+const resetBtn = document.getElementById("reset-button");
 //Our JSON variable containing 1-99
 const randomSym = {
         "1": "!",
@@ -224,12 +224,12 @@ const randomSym = {
 
 //Lets start creating a function to try and make things work. Lets change the text to pick number when button is pressed.
 function nextPage() {
-   // const nextBtn = document.getElementById('next-button')
+  // const nextBtn = document.getElementById('next-button')
 
     nextBtn.addEventListener('click', function() {
         // Inside this callback function, you can change the text of the div
         console.log("Button pressed!");
         divText.innerHTML = "Pick a number from 1-99";
     });
-
+    
     } 
