@@ -223,9 +223,11 @@ const randomSym = {
 }
 
 //Lets start creating a function to try and make things work. Lets SWITCH text inside my container when Start is pressed.
+function nextPage() {
+        if (nextBtn.addEventListener('click', ())){
 
-switch nextPage() {
-    case 0:
-        document.getElementById("div-text").innerHTML = "Pick a number from 1-99"; 
+        divText.innerHTML = "Pick a number from 1-99";
+
+        }
 
      } 
