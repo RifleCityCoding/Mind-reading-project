@@ -223,13 +223,12 @@ const randomSym = {
 }
 
 //Lets start creating a function to try and make things work. Lets change the text to pick number when button is pressed.
-function nextPage() {
-  // const nextBtn = document.getElementById('next-button')
 
-    nextBtn.addEventListener('click', function() {
+  /*  nextBtn.addEventListener('click', () => {
         // Inside this callback function, you can change the text of the div
         console.log("Button pressed!");
         divText.innerHTML = "Pick a number from 1-99";
     });
     
-    } 
+*/
+    //Okay so now we comment out the above statement and try to make it a switch statement!
