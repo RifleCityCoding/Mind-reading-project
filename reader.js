@@ -182,8 +182,8 @@ nextBtn.addEventListener('click', () => {
                 }
             }
             break;
-        case "Scroll down and find your number":
-            divText.innerHTML = "Your symbol is " + commonSymbol + "!<br>";
+        case 'Scroll down and find your number<br/>':
+            divText.innerHTML = "Your symbol is " + commonSymbol + '!<br>';
             break;
     }
 })
