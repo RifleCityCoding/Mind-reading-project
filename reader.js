@@ -154,6 +154,8 @@ resetBtn.addEventListener('click', () => {
     pageNumber = -1;
     document.getElementById("next-button").hidden = false;
     nextBtn.innerHTML = "Start"
+    //add subtext removal
+    subText.innerHTML = "";
 });
 // Adding an event listener for when we click the next button.
 
