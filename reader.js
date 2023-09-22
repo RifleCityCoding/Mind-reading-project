@@ -1,5 +1,5 @@
 /*
-Psuedo for JS
+Pseudo for JS
 
 JSON list
 {
@@ -112,7 +112,7 @@ Variables:
 Functions
     nextButton
         Using a switch case for this
-            switch : Case 0-5 
+            switch : Case 0-5
 */
 // Name our variables
 const divText = document.getElementById("div-text");
@@ -121,7 +121,7 @@ const nextBtn = document.getElementById("next-button");
 const resetBtn = document.getElementById("reset-button");
 //Added this later to call the case number in my switch statement.
 let pageNumber = -1;
-// Adding another variable to that show my button when called in my switch casse
+// Adding another variable to that show my button when called in my switch case
 //Needed to move this down to the switch
 //let showResetBtn = document.getElementById("reset-button").hidden = true;
 // Creating a char code string to pull random symbols from.
@@ -137,7 +137,7 @@ const commonSymbol = getRandomSymbol();
 
 // Create a variable for the symbols to randomly generate
 /* let randomSym = Math.random() * yourSym.length;
-Putting this inside a function 
+Putting this inside a function
 */
 
 //Need to turn this into a function that returns the symbol to user
@@ -154,6 +154,7 @@ resetBtn.addEventListener('click', () => {
     pageNumber = -1;
     document.getElementById("next-button").hidden = false;
     nextBtn.innerHTML = "Start"
+    subText.innerHTML = ""
 });
 // Adding an event listener for when we click the next button.
 
@@ -163,7 +164,7 @@ nextBtn.addEventListener('click', () => {
     document.getElementById("reset-button").hidden = false;
 // Need to add an event listener for reset button.
 
-    
+
 
     // Call your current text to the page
     switch (pageNumber) {
@@ -184,7 +185,7 @@ nextBtn.addEventListener('click', () => {
             divText.innerHTML = 'Scroll down and find your number<br/>',
             subText.innerHTML = "Find your new number. <br> Note the symbol beside the number",
             nextBtn.innerHTML = "Reveal"
-            
+
             for (let i = 0; i <= 99 ; i++) {
                 if (i % 9 === 0){
                     divText.innerHTML += i + '=' + commonSymbol + '<br>';
