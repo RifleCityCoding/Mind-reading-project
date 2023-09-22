@@ -123,35 +123,49 @@ const resetBtn = document.getElementById("reset-button");
 // Creating a char code string to pull random symbols from.
 
 // Create our array of symbols
-const yourSym = ["!", "@","#","$","%","★","☆","✡","✦"]
-//Lets start creating a function to try and make things work. Lets change the text to pick number when button is pressed.
-let randomSym = Math.random() * yourSym.length;
-  /*  nextBtn.addEventListener('click', () => {
-        // Inside this callback function, you can change the text of the div
-        console.log("Button pressed!");
-        divText.innerHTML = "Pick a number from 1-99";
-    });
-    
+
+
+const yourSym = ["!", "@", "#", "$", "%", "★", "☆", "✡", "✦"]
+
+
+// Create a variable for the symbols to randomly generate
+/* let randomSym = Math.random() * yourSym.length;
+Putting this inside a function 
 */
-    //Okay so now we comment out the above statement and try to make it a switch statement!
 
-    nextBtn.addEventListener('click', () => {
-        // Get the current text of the div
-        const currentText = divText.innerHTML;
-    
-// Call your current text to the page
-switch (currentText) {
-    case "I can read your mind!":
-        divText.innerHTML = "Pick a number from 1-99";
-        break;
-    case "Pick a number from 1-99":
-        divText.innerHTML = "Add both digits together to get a new number"
-        break;
-    case "Add both digits together to get a new number":
-        divText.innerHTML = "Subtract the new number from your original number"
-    case "Subtract the new number from your original number":
-        divText.innerHTML = 'Scroll down and find your number<br/>';
+//Need to turn this into a function that returns the symbol to user
+function getRandomSymbol() {
+    const randomSym = Math.floor(Math.random() * yourSym.length);
+    return yourSym[randomSym];
+}
 
 
-}   
+// Adding an event listener for when we click the next button.
+
+nextBtn.addEventListener('click', () => {
+    // Get the current text of the div
+    const currentText = divText.innerHTML;
+
+    // Call your current text to the page
+    switch (currentText) {
+        case "I can read your mind!":
+            divText.innerHTML = "Pick a number from 1-99";
+            break;
+        case "Pick a number from 1-99":
+            divText.innerHTML = "Add both digits together to get a new number"
+            break;
+        case "Add both digits together to get a new number":
+            divText.innerHTML = "Subtract the new number from your original number"
+        case "Subtract the new number from your original number":
+            divText.innerHTML = 'Scroll down and find your number<br/>';
+            //I figured it out! I need to get a symbol assigned to a variable BY itself and THEN assign it to 9
+            const commonSymbol = getRandomSymbol();
+            for (let i = 0; i <= 99 ; i++) {
+                if (i % 9 === 0){
+                    divText.innerHTML += i + '-' + commonSymbol + '<br>';
+                }
+                else {
+                    divText.innerHTML += i + '=' + getRandomSymbol() + '<br>';
+                }
+            }}
     })
