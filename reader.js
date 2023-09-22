@@ -119,6 +119,8 @@ const divText = document.getElementById("div-text");
 const subText = document.getElementById("sub-text");
 const nextBtn = document.getElementById("next-button");
 const resetBtn = document.getElementById("reset-button");
+//Added this later to call the case number in my switch statement.
+let pageNumber = -1;
 // Adding another variable to that show my button when called in my switch casse
 //Needed to move this down to the switch
 //let showResetBtn = document.getElementById("reset-button").hidden = true;
@@ -128,6 +130,9 @@ const resetBtn = document.getElementById("reset-button");
 
 
 const yourSym = ["!", "@", "#", "$", "%", "★", "☆", "✡", "✦"]
+//I figured it out! I need to get a symbol assigned to a variable BY itself and THEN assign it to 9
+const commonSymbol = getRandomSymbol();
+//Storing our used symbols
 
 
 // Create a variable for the symbols to randomly generate
@@ -136,42 +141,50 @@ Putting this inside a function
 */
 
 //Need to turn this into a function that returns the symbol to user
+
+
 function getRandomSymbol() {
     const randomSym = Math.floor(Math.random() * yourSym.length);
     return yourSym[randomSym];
-};
+}
 
 resetBtn.addEventListener('click', () => {
     divText.innerHTML = "I can read your mind!";
     document.getElementById("reset-button").hidden = true;
+    pageNumber = -1;
+    document.getElementById("next-button").hidden = false;
+    nextBtn.innerHTML = "Start"
 });
 // Adding an event listener for when we click the next button.
 
 nextBtn.addEventListener('click', () => {
     // Get the current text of the div
-    const currentText = divText.innerHTML;
+    pageNumber = pageNumber + 1;
     document.getElementById("reset-button").hidden = false;
-
 // Need to add an event listener for reset button.
 
     
 
     // Call your current text to the page
-    switch (currentText) {
-        case "I can read your mind!":
-            divText.innerHTML = "Pick a number from 1-99";
+    switch (pageNumber) {
+        case 0:
+            divText.innerHTML = "Pick a number from 1-99",
+            nextBtn.innerHTML = "Next",
+            subText.innerHTML = "when you have your number click next"
+            break;
+        case 1:
+            divText.innerHTML = "Add both digits together to get a new number",
+            subText.innerHTML = "Ex: 14 is 1 + 4 = 5 <br> click next to proceed"
+            break;
+        case 2:
+            divText.innerHTML = "Subtract the new number from your original number",
+            subText.innerHTML = "Ex: 14 - 5 = 9 <br> click next to proceed"
+            break;
+        case 3:
+            divText.innerHTML = 'Scroll down and find your number<br/>',
+            subText.innerHTML = "Find your new number. <br> Note the symbol beside the number",
+            nextBtn.innerHTML = "Reveal"
             
-            break;
-        case "Pick a number from 1-99":
-            divText.innerHTML = "Add both digits together to get a new number"
-            break;
-        case "Add both digits together to get a new number":
-            divText.innerHTML = "Subtract the new number from your original number"
-            break;
-        case "Subtract the new number from your original number":
-            divText.innerHTML = 'Scroll down and find your number<br/>';
-            //I figured it out! I need to get a symbol assigned to a variable BY itself and THEN assign it to 9
-            const commonSymbol = getRandomSymbol();
             for (let i = 0; i <= 99 ; i++) {
                 if (i % 9 === 0){
                     divText.innerHTML += i + '=' + commonSymbol + '<br>';
@@ -182,8 +195,10 @@ nextBtn.addEventListener('click', () => {
                 }
             }
             break;
-        case 'Scroll down and find your number<br/>':
-            divText.innerHTML = "Your symbol is " + commonSymbol + '!<br>';
+        case 4:
+            divText.innerHTML = "Your symbol is " + commonSymbol + '!<br>',
+            document.getElementById("next-button").hidden = true,
+            subText.innerHTML = ""
             break;
     }
 })
